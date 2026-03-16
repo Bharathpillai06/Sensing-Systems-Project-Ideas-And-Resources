@@ -393,6 +393,7 @@ A curated guide to sensing and remote sensing projects, organized by topic group
 **Resources:**
 - [PIR with ESP32](https://randomnerdtutorials.com/esp32-pir-motion-sensor-interrupts-timers/)
 - [ESP32 BLE Tutorial](https://randomnerdtutorials.com/esp32-bluetooth-low-energy-ble-arduino-ide/)
+- [Completed Build](https://github.com/Bharathpillai06/Smart-Motion-Sensor)
 
 ---
 
