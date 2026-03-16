@@ -269,18 +269,6 @@ A curated guide to remote sensing and embedded sensing projects, organized by co
 
 ---
 
-## Application Domain Quick-Reference
-
-| Domain | Recommended Modalities | Example Projects Above |
-|---|---|---|
-| **Agriculture** | Multispectral, hyperspectral, LoRa sensor mesh, SAR | #6, #7, #14, #17, #18 |
-| **Environmental Conservation** | Acoustic, computer vision, GPS tracking, NDVI | #2, #5, #6, #8, #9 |
-| **Infrastructure** | RADAR, LiDAR, GPR, thermal, vibration | #4, #10, #11, #15, #16, #20 |
-| **Defense / Security** | RADAR, SDR/SIGINT, passive radar, thermal | #11, #12, #16, #17, #19 |
-| **Climate & Earth Observation** | SAR, multispectral, photogrammetry | #6, #13, #17, #18 |
-
----
-
 ## Sensing Modality Quick-Reference
 
 | Modality | Works in Dark | Works Through Clouds | Works Underwater | Range |
@@ -293,34 +281,80 @@ A curated guide to remote sensing and embedded sensing projects, organized by co
 | Multispectral | No | No | No | Line-of-sight |
 | Passive RF / SDR | Yes | Yes | No | km–global |
 | Ground Penetrating Radar | Yes | Yes | No | 0–10m subsurface |
+| Bioelectric (EMG/EEG) | Yes | Yes | No | Surface contact |
+| Magnetometry | Yes | Yes | Partially | cm–100m |
 
 ---
 
-## Learning Resources by Topic
+## Learning Resources by Tier
 
-**Signal Processing Fundamentals**
-- [PySDR — A Guide to SDR and DSP using Python](https://pysdr.org/) — free, excellent
-- [Think DSP — Digital Signal Processing in Python](https://greenteapress.com/wp/think-dsp/) — free book
-
-**Remote Sensing & Earth Observation**
-- [NASA ARSET training programs](https://appliedsciences.nasa.gov/arset) — free online courses
-- [ESA Earth Observation training](https://eo4society.esa.int/trainings/) — SAR, optical, applications
-- [Google Earth Engine](https://earthengine.google.com/) — free cloud compute for satellite data
-
-**LiDAR & Point Clouds**
-- [Open3D documentation](http://www.open3d.org/docs/release/)
-- [PDAL point cloud processing](https://pdal.io/)
-- [CloudCompare](https://www.cloudcompare.org/) — free, open-source
-
-**Radar & SDR**
-- [GNU Radio tutorials](https://wiki.gnuradio.org/index.php/Tutorials)
-- [RTL-SDR.com blog](https://www.rtl-sdr.com/) — extensive project catalog
-- [Knowles Radar tutorials](https://www.ti.com/tool/MMWAVE-TRAINING)
+### Tier 1 — Affordable (ESP32 / Raspberry Pi basics)
 
 **Embedded Systems**
-- [Random Nerd Tutorials](https://randomnerdtutorials.com/) — ESP32 + Raspberry Pi
-- [Adafruit Learning System](https://learn.adafruit.com/) — sensors and hardware
-- [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/)
+- [Random Nerd Tutorials](https://randomnerdtutorials.com/) — ESP32 + Raspberry Pi, huge project library
+- [Adafruit Learning System](https://learn.adafruit.com/) — sensors, breakout boards, and hardware guides
+- [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/) — official Pi docs
+- [Arduino Project Hub](https://projecthub.arduino.cc/) — community sensor projects
+
+**Signal Processing Basics**
+- [Think DSP — Digital Signal Processing in Python](https://greenteapress.com/wp/think-dsp/) — free book, great starting point
+- [PySDR — A Guide to SDR and DSP using Python](https://pysdr.org/) — excellent, free, covers RTL-SDR basics
+
+**Sensors & Datasheets**
+- [SparkFun Hookup Guides](https://learn.sparkfun.com/) — every sensor has a walkthrough
+- [Adafruit CircuitPython guides](https://learn.adafruit.com/category/circuitpython) — quick sensor bringup
+
+---
+
+### Tier 2 — Moderate (Raspberry Pi + additional hardware)
+
+**Computer Vision**
+- [Ultralytics YOLOv8 docs](https://docs.ultralytics.com/) — object detection, tracking, counting
+- [OpenCV tutorials](https://docs.opencv.org/4.x/d9/df8/tutorial_root.html) — image processing fundamentals
+- [PyImageSearch](https://pyimagesearch.com/) — applied CV tutorials with Pi and cameras
+
+**Remote Sensing & Earth Observation**
+- [NASA ARSET training programs](https://appliedsciences.nasa.gov/arset) — free online courses, certificates
+- [ESA Earth Observation training](https://eo4society.esa.int/trainings/) — SAR, optical, climate applications
+- [Google Earth Engine](https://earthengine.google.com/) — free cloud compute for satellite imagery
+
+**RF & SDR**
+- [RTL-SDR.com blog](https://www.rtl-sdr.com/) — extensive SDR project catalog and tutorials
+- [GNU Radio tutorials](https://wiki.gnuradio.org/index.php/Tutorials) — open-source SDR framework
+- [SondeHub radiosonde tracker](https://sondehub.org/) — live weather balloon data
+
+**Acoustic & Audio**
+- [librosa documentation](https://librosa.org/doc/latest/index.html) — Python audio analysis
+- [PyRoomAcoustics](https://github.com/LCAV/pyroomacoustics) — beamforming and room acoustics
+- [BirdNET-Analyzer](https://github.com/kahst/BirdNET-Analyzer) — bird species from audio
+
+---
+
+### Tier 3 — Advanced (Jetson / specialized hardware / satellite data)
+
+**LiDAR & Point Clouds**
+- [Open3D documentation](http://www.open3d.org/docs/release/) — point cloud processing in Python
+- [PDAL point cloud processing](https://pdal.io/) — pipeline-based LPC processing
+- [CloudCompare](https://www.cloudcompare.org/) — free, open-source 3D point cloud viewer
+- [USGS 3DEP LiDAR portal](https://www.usgs.gov/3d-elevation-program) — free national LiDAR data
+
+**RADAR & SAR**
+- [ESA SNAP toolbox](https://step.esa.int/main/toolboxes/snap/) — SAR processing (Sentinel-1)
+- [ASF SARVIEWS flood products](https://sarviews-hazards.alaska.edu/) — SAR flood detection
+- [TI mmWave training](https://www.ti.com/tool/MMWAVE-TRAINING) — FMCW radar SDK and labs
+- [PyPassiveRadar](https://github.com/passive-radar/PyPassiveRadar) — passive coherent location
+
+**Medical / BCI**
+- [MNE-Python](https://mne.tools/stable/index.html) — EEG/MEG signal processing
+- [OpenBCI documentation](https://docs.openbci.com/) — open-source BCI hardware
+- [BCI Competition datasets](https://www.bbci.de/competition/) — benchmark EEG datasets
+
+**Citizen Science Platforms**
+- [SatNOGS network](https://satnogs.org/) — global CubeSat ground station network
+- [OpenEEW](https://openeew.com/) — distributed earthquake early warning
+- [Blitzortung](https://www.blitzortung.org/) — global lightning detection network
+- [CosmicWatch](https://www.cosmicwatch.lns.mit.edu/) — cosmic ray muon detectors
+- [Breakthrough Listen open data](https://seti.berkeley.edu/opendata.html) — SETI datasets
 
 ---
 
